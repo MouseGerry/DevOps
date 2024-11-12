@@ -26,11 +26,11 @@ jobs:
         with:
           context: ./backend
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/my-backend:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/for-devops:backend
 
       - name: Build and push frontend image
         uses: docker/build-push-action@v4
         with:
           context: ./frontend
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/my-frontend:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/for-devops:frontend
